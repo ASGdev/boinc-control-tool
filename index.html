@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Boinc control</title>
+	<link rel="stylesheet" href="vendor/uikit/css/uikit.min.css" />
+	<link rel="stylesheet" href="app.css" />
+    <script src="vendor/uikit/js/uikit.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+	<div class="uk-container" id="app">
+		<div class="uk-grid-collapse uk-child-width-expand@s uk-text-center" uk-grid>
+			<crunch-control :intelstatus="isIntelEnabled" :nvidiastatus="isNvidiaEnabled" ></crunch-control>
+		</div>
+		
+		<div>
+			<timer-control></timer-control>
+		</div>
+	
+		<hr class="uk-divider-icon">
+
+
+		<table-control :tasks="wus"></table-control>
+
+
+	</div>
+    <script>
+      // You can also require other files to run in this process
+      require('./parser.js')
+    </script>
+	
+	<script src="appui.js"></script>
+  </body>
+</html>
