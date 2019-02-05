@@ -1,0 +1,12 @@
+.on {
+	background-color:#2ecc71;
+}
+
+.off {
+	background-color:#e74c3c;
+}
+
+.table-container {
+	height: 400px;
+	overflow-y: scroll;
+}
